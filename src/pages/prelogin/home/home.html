@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>{{ 'home.userName' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<form [formGroup]="formgroup" (ngSubmit)="onSubmit()"> <!--method for submit-->
+  <ion-list>
+    <ion-item>
+      <ion-label floating>
+      User Name
+      </ion-label>
+      <ion-input type="text" formControlName="firstname" required></ion-input> <!-- binds input to the form control-->
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password"  formControlName="password" required></ion-input>
+    </ion-item>
+    <ion-item></ion-item>
+    
+  </ion-list>
+
+  <button  ion-button [disabled]="!formgroup.valid">Submit</button>
+</form>
+

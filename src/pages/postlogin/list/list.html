@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title start>List Component</ion-title>
+    <ion-buttons end>
+      <button ion-button color="primary" (click)="onLogOut()">
+        Log Out
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button (click)="goToAlert()" large>
+          Alert
+        </button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button  large>
+            Badges
+          </button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
